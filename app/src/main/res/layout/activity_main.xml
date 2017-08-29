@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="144dp">
+            android:layout_height="160dp">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -32,6 +32,7 @@
         <me.relex.viewpagerheaderscrolldemo.widget.SlidingTabLayout
             android:id="@id/tabs"
             android:layout_width="match_parent"
+            android:background="#ffffffff"
             android:layout_height="@dimen/tabs_height"/>
     </LinearLayout>
 

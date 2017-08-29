@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6570da</color>
+    <color name="colorPrimaryDark">#4b529c</color>
+    <color name="status_bar_color">@color/color.blue</color>
+    <color name="color.blue">#007aff</color>
+    <color name="rv_left_backage_color">#eeeeee</color>
+
+
+</resources>
