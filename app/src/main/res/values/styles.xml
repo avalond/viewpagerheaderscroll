@@ -8,5 +8,13 @@
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
-
+    <style name="TabLayoutTextStyle">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:typeface">normal</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">2dp</item>
+        <item name="tabPaddingEnd">2dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

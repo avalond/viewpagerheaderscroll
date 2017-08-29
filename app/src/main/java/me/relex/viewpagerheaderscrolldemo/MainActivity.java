@@ -1,6 +1,7 @@
 package me.relex.viewpagerheaderscrolldemo;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -18,7 +19,6 @@ import me.relex.viewpagerheaderscrolldemo.fragment.ListViewFragment;
 import me.relex.viewpagerheaderscrolldemo.tools.ScrollableFragmentListener;
 import me.relex.viewpagerheaderscrolldemo.tools.ScrollableListener;
 import me.relex.viewpagerheaderscrolldemo.tools.ViewPagerHeaderHelper;
-import me.relex.viewpagerheaderscrolldemo.widget.SlidingTabLayout;
 import me.relex.viewpagerheaderscrolldemo.widget.TouchCallbackLayout;
 
 public class MainActivity extends BaseActivity
@@ -40,16 +40,17 @@ public class MainActivity extends BaseActivity
 
     private Interpolator mInterpolator = new DecelerateInterpolator();
     private Toolbar mToolbar;
+    private TabLayout mTabLayout;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
         mTouchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
-        mTabHeight = getResources().getDimensionPixelSize(R.dimen.tabs_height);
+       // mTabHeight = getResources().getDimensionPixelSize(R.dimen.tabs_height);
+
         mHeaderHeight = getResources().getDimensionPixelSize(R.dimen.viewpager_header_height);
 
         mViewPagerHeaderHelper = new ViewPagerHeaderHelper(this, this);
@@ -59,15 +60,10 @@ public class MainActivity extends BaseActivity
 
         mHeaderLayoutView = findViewById(R.id.header);
 
-        SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.tabs);
-        slidingTabLayout.setDistributeEvenly(true);//均匀分布
-
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
+        mViewPager.setOffscreenPageLimit(2);//set cache pager
+        mViewPager.setPageMargin(5);
         mViewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-
-        slidingTabLayout.setViewPager(mViewPager);
-
-        ViewCompat.setTranslationY(mViewPager, mHeaderHeight);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -75,6 +71,17 @@ public class MainActivity extends BaseActivity
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
+        mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        if (mTabLayout != null) {
+            mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        }
+        mTabLayout.setupWithViewPager(mViewPager);
+
+        mTabHeight =mTabLayout.getHeight();
+        //   slidingTabLayout.setViewPager(mViewPager);
+        ViewCompat.setTranslationY(mViewPager, mHeaderHeight);
+
     }
 
 
@@ -91,7 +98,8 @@ public class MainActivity extends BaseActivity
 
 
     @Override public boolean isViewBeingDragged(MotionEvent event) {
-        return mScrollableListenerArrays.valueAt(mViewPager.getCurrentItem()).isViewBeingDragged(event);
+        return mScrollableListenerArrays.valueAt(mViewPager.getCurrentItem())
+            .isViewBeingDragged(event);
     }
 
 
