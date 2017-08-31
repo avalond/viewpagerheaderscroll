@@ -36,17 +36,15 @@ public abstract class BaseViewPagerFragment extends Fragment implements Scrollab
     //     }
     // }
 
-
     @Override public void onAttach(Context context) {
         super.onAttach(context);
         try {
             mListener = (ScrollableFragmentListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(
-                context.toString() + " must implement ScrollableFragmentListener");
+                    context.toString() + " must implement ScrollableFragmentListener");
         }
     }
-
 
     @Override
     public void onDetach() {

@@ -26,10 +26,8 @@ public class ViewPagerHeaderHelper {
     private int mMinimumFlingVelocity;
     private int mMaximumFlingVelocity;
 
-
     private ViewPagerHeaderHelper() {
     }
-
 
     public ViewPagerHeaderHelper(Context context, OnViewPagerTouchListener listener) {
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
@@ -39,7 +37,6 @@ public class ViewPagerHeaderHelper {
 
         mListener = listener;
     }
-
 
     public boolean onLayoutInterceptTouchEvent(MotionEvent event, int headerHeight) {
         mHeaderHeight = headerHeight;
@@ -67,7 +64,7 @@ public class ViewPagerHeaderHelper {
                     final float yDiff = y - mInitialMotionY;
                     final float xDiff = x - mInitialMotionX;
                     if ((!mIsHeaderExpand && yDiff > mTouchSlop)  // header fold , pull
-                        || (mIsHeaderExpand && yDiff < 0))// header expand, push
+                            || (mIsHeaderExpand && yDiff < 0))// header expand, push
                     {
                         if (Math.abs(yDiff) > Math.abs(xDiff)) {
                             mIsBeingMove = true;
@@ -88,7 +85,6 @@ public class ViewPagerHeaderHelper {
 
         return mIsBeingMove;
     }
-
 
     public boolean onLayoutTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -172,7 +168,6 @@ public class ViewPagerHeaderHelper {
         return true;
     }
 
-
     private void resetTouch() {
         mIsBeingMove = false;
         mHandlingTouchEventFromDown = false;
@@ -183,25 +178,22 @@ public class ViewPagerHeaderHelper {
         }
     }
 
-
     public void setHeaderExpand(boolean isHeaderExpand) {
         this.mIsHeaderExpand = isHeaderExpand;
     }
-
 
     public float getInitialMotionY() {
         return mInitialMotionY;
     }
 
-
     public float getLastMotionY() {
         return mLastMotionY;
     }
 
-
     public interface OnViewPagerTouchListener {
 
         boolean isViewBeingDragged(MotionEvent event);
+
         boolean isLeftViewBeingDragged(MotionEvent event);//add by kevin
 
         void onMoveStarted(float eventY);

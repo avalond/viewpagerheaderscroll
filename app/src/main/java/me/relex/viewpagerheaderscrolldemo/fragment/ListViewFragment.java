@@ -16,8 +16,8 @@ import me.relex.viewpagerheaderscrolldemo.delegate.AbsListViewDelegate;
 public class ListViewFragment extends BaseViewPagerFragment
         implements AbsListView.OnItemClickListener {
 
-    private ListView mListView,mListView1;
-    private ListAdapter mAdapter,mAdapter1;
+    private ListView mListView, mListView1;
+    private ListAdapter mAdapter, mAdapter1;
     private AbsListViewDelegate mAbsListViewDelegate = new AbsListViewDelegate();
 
     public static ListViewFragment newInstance(int index) {
@@ -46,8 +46,10 @@ public class ListViewFragment extends BaseViewPagerFragment
                 listArrays = getResources().getStringArray(R.array.countries);
                 break;
         }
-        mAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, android.R.id.text1, listArrays);
-        mAdapter1 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, android.R.id.text1, listArrays);
+        mAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,
+                android.R.id.text1, listArrays);
+        mAdapter1 = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,
+                android.R.id.text1, listArrays);
     }
 
     @Override
@@ -73,8 +75,7 @@ public class ListViewFragment extends BaseViewPagerFragment
         return mAbsListViewDelegate.isViewBeingDragged(event, mListView);
     }
 
-
     @Override public boolean isLeftViewBeingDragged(MotionEvent event) {
-        return mAbsListViewDelegate.isViewBeingDragged(event,mListView1);
+        return mAbsListViewDelegate.isViewBeingDragged(event, mListView1);
     }
 }
