@@ -1,4 +1,4 @@
-package me.relex.viewpagerheaderscrolldemo;
+package me.relex.viewpagerheaderscroll;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -14,12 +14,12 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
-import me.relex.viewpagerheaderscrolldemo.base.BaseActivity;
-import me.relex.viewpagerheaderscrolldemo.fragment.ListViewFragment;
-import me.relex.viewpagerheaderscrolldemo.tools.ScrollableFragmentListener;
-import me.relex.viewpagerheaderscrolldemo.tools.ScrollableListener;
-import me.relex.viewpagerheaderscrolldemo.tools.ViewPagerHeaderHelper;
-import me.relex.viewpagerheaderscrolldemo.widget.TouchCallbackLayout;
+import me.relex.viewpagerheaderscroll.base.BaseActivity;
+import me.relex.viewpagerheaderscroll.fragment.ListViewFragment;
+import me.relex.viewpagerheaderscroll.tools.ScrollableFragmentListener;
+import me.relex.viewpagerheaderscroll.tools.ScrollableListener;
+import me.relex.viewpagerheaderscroll.tools.ViewPagerHeaderHelper;
+import me.relex.viewpagerheaderscroll.widget.TouchCallbackLayout;
 
 public class MainActivity extends BaseActivity
     implements TouchCallbackLayout.TouchEventListener, ScrollableFragmentListener,

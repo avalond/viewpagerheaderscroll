@@ -1,4 +1,4 @@
-package me.relex.viewpagerheaderscrolldemo.base;
+package me.relex.viewpagerheaderscroll.base;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-import me.relex.viewpagerheaderscrolldemo.R;
-import me.relex.viewpagerheaderscrolldemo.utils.ActivityManager;
+import me.relex.viewpagerheaderscroll.R;
+import me.relex.viewpagerheaderscroll.utils.ActivityManager;
 
 /**
  * @author kevin.

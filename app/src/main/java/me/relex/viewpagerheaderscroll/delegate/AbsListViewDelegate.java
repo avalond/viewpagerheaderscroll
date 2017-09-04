@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package me.relex.viewpagerheaderscrolldemo.delegate;
+package me.relex.viewpagerheaderscroll.delegate;
 
 import android.graphics.Rect;
 import android.view.MotionEvent;

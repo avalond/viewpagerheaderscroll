@@ -1,10 +1,10 @@
-package me.relex.viewpagerheaderscrolldemo.fragment;
+package me.relex.viewpagerheaderscroll.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import me.relex.viewpagerheaderscrolldemo.tools.ScrollableFragmentListener;
-import me.relex.viewpagerheaderscrolldemo.tools.ScrollableListener;
+import me.relex.viewpagerheaderscroll.tools.ScrollableFragmentListener;
+import me.relex.viewpagerheaderscroll.tools.ScrollableListener;
 
 public abstract class BaseViewPagerFragment extends Fragment implements ScrollableListener {
 

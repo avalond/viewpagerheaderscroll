@@ -1,4 +1,4 @@
-package me.relex.viewpagerheaderscrolldemo.tools;
+package me.relex.viewpagerheaderscroll.tools;
 
 public interface ScrollableFragmentListener {
 

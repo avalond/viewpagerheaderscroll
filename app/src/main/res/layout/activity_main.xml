@@ -1,4 +1,4 @@
-<me.relex.viewpagerheaderscrolldemo.widget.TouchCallbackLayout
+<me.relex.viewpagerheaderscroll.widget.TouchCallbackLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@id/layout"
@@ -43,4 +43,4 @@
             app:tabTextColor="@color/gray_color"/>
     </LinearLayout>
 
-</me.relex.viewpagerheaderscrolldemo.widget.TouchCallbackLayout>
+</me.relex.viewpagerheaderscroll.widget.TouchCallbackLayout>

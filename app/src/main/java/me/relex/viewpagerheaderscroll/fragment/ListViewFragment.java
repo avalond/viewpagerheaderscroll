@@ -1,4 +1,4 @@
-package me.relex.viewpagerheaderscrolldemo.fragment;
+package me.relex.viewpagerheaderscroll.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import me.relex.viewpagerheaderscrolldemo.R;
-import me.relex.viewpagerheaderscrolldemo.delegate.AbsListViewDelegate;
+import me.relex.viewpagerheaderscroll.R;
+import me.relex.viewpagerheaderscroll.delegate.AbsListViewDelegate;
 
 public class ListViewFragment extends BaseViewPagerFragment
         implements AbsListView.OnItemClickListener {

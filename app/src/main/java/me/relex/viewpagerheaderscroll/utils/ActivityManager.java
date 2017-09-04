@@ -1,4 +1,4 @@
-package me.relex.viewpagerheaderscrolldemo.utils;
+package me.relex.viewpagerheaderscroll.utils;
 
 import android.app.Activity;
 import android.content.Context;
