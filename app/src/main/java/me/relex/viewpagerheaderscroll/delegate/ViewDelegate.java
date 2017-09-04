@@ -17,7 +17,7 @@ package me.relex.viewpagerheaderscroll.delegate;
 
 import android.view.View;
 
-public interface ViewDelegate {
+interface ViewDelegate {
 
     /**
      * Allows you to provide support for View which do not have built-in
